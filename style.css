@@ -1,0 +1,193 @@
+/* Variables */
+:root {
+  --background-color: #e9effd;
+  --primary-color: #2c3e50;
+  --secondary-color: #333;
+  --shadow-color: #484bf24d;
+  --button-color: #4a4ef8;
+}
+
+/* Estilos generales */
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  height: 100%;
+}
+
+/* Columnas */
+.column {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.img-logo {
+  width: 40%;
+  max-height: 50px;
+  height: auto;
+}
+
+/* Secciones de entrada y resultado */
+.input-section,
+.result {
+  flex: 4;
+}
+
+/* Resultado */
+.result {
+  background-color: #ffffff;
+  color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px var(--shadow-color);
+}
+
+/* Imágenes */
+img {
+  max-width: 65%;
+  height: auto;
+}
+
+/* Párrafos */
+p {
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Estilos adicionales para la entrada */
+.input-container {
+  margin-bottom: 20px;
+}
+
+/* Estilos para botones dentro de la entrada */
+.button-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-input button {
+  flex: 1;
+  margin: 10px;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+/* Margen en el lado derecho de la sección input */
+.input-section {
+  margin-right: 10px;
+}
+
+/* Estilos para los botones "Encriptar" y "Desencriptar" */
+button#encriptar,
+button#desencriptar {
+  border: 1px solid var(--button-color);
+  color: white;
+}
+
+button#encriptar {
+  background-color: var(--button-color);
+}
+
+button#desencriptar {
+  background-color: white;
+  margin-left: 0;
+  color: var(--button-color);
+}
+
+/* Estilos para el textarea */
+textarea {
+  background-color: var(--background-color);
+  border: none;
+  font-size: 25px;
+  width: 100%;
+  height: 65vh;
+  resize: none;
+  padding: 10px;
+  color: var(--primary-color);
+  outline: none;
+}
+
+/* Estilos para la información de entrada */
+.input-info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: var(--primary-color);
+}
+
+/* Estilos para el ícono */
+.input-info i {
+  margin-right: 5px;
+}
+
+/* Estilos para el párrafo */
+.input-info p {
+  margin: 0;
+}
+
+/* Estilos para el mensaje encontrado */
+#mensaje-encontrado {
+  text-align: center;
+}
+#botoncopiar {
+  display: none;
+}
+/* Estilos para el botón de copiar */
+button#botoncopiar {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button#botoncopiar img {
+  width: 9%;
+  height: 9%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .column.logo,
+  .input-section,
+  .column.result {
+    width: 100%;
+  }
+  textarea {
+    height: 30vh;
+  }
+  .img-logo {
+    width: 10%;
+  }
+}

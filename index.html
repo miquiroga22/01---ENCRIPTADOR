@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador y Desencriptador</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/5387491098.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column logo">
+        <img class="img-logo" src="img/archivo-encriptado.png" alt="Logo" />
+      </div>
+      <div class="input-section">
+        <textarea
+          name=""
+          onkeyup="ocultarmensaje(this.value)"
+          id=""
+          cols="40"
+          rows="18"
+        >
+Ingrese el texto aqui</textarea
+        >
+        <div class="input-info">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <p>Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="button-input">
+          <button id="encriptar" onclick="encriptar()">Encriptar</button>
+          <button id="desencriptar" onclick="desencriptar()">
+            Desencriptar
+          </button>
+        </div>
+      </div>
+      <div class="column result">
+        <div class="get-result">
+          <h2 id="text-result"></h2>
+          <button id="botoncopiar" onclick="copiarTexto()">
+            <img src="img/copia-el-papel.png" alt="CopiarTexto" />
+          </button>
+        </div>
+        <div id="mensaje-encontrado">
+          <img
+            src="img/access-control-system-abstract-concept.jpg"
+            alt="Ningún mensaje encontrado"
+          />
+          <h2>Ningún mensaje fue encontrado</h2>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+      </div>
+    </div>
+    <footer>Michel Quiroga</footer>
+    <script src="js.js"></script>
+  </body>
+</html>
